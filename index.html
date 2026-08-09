@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy 1 Year & 4 Months Anniversary ❤️</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pyidaungsu:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Pyidaungsu', sans-serif;
+        }
+        body {
+            background-color: #fff0f3;
+            color: #4a4a4a;
+            text-align: center;
+            padding: 20px;
+        }
+        header {
+            padding: 50px 20px;
+        }
+        h1 {
+            color: #d81159;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            font-size: 1.2rem;
+            color: #8f2d56;
+            margin-bottom: 30px;
+        }
+        .timer-container {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 15px;
+            display: inline-flex;
+            gap: 15px;
+            box-shadow: 0 4px 15px rgba(216, 17, 89, 0.1);
+            margin: 20px 0;
+        }
+        .time-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-width: 60px;
+        }
+        .time-box span:first-child {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #d81159;
+        }
+        .time-box span:last-child {
+            font-size: 0.9rem;
+            color: #666;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        .photo-card {
+            background: white;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+        .photo-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: transform 0.5s ease;
+        }
+        .photo-card img:hover {
+            transform: scale(1.1);
+        }
+        .photo-card p {
+            margin-top: 10px;
+            font-size: 0.95rem;
+            color: #555;
+        }
+        .letter-section {
+            max-width: 700px;
+            background: white;
+            margin: 40px auto;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(216, 17, 89, 0.1);
+            text-align: left;
+        }
+        .letter-section h2 {
+            color: #d81159;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .letter-section p {
+            line-height: 1.8;
+            margin-bottom: 15px;
+            font-size: 1.05rem;
+        }
+        footer {
+            margin-top: 50px;
+            font-size: 0.9rem;
+            color: #888;
+        }
+        .heart-rain {
+            position: fixed;
+            top: -10vh;
+            font-size: 20px;
+            user-select: none;
+            z-index: 1000;
+            pointer-events: none;
+            animation: fall linear forwards;
+        }
+        @keyframes fall {
+            0% { transform: translateY(-10vh) translateX(0); opacity: 1; }
+            100% { transform: translateY(105vh) translateX(20px); opacity: 0; }
+        }
+        .secret-section {
+            text-align: center;
+            margin: 40px auto;
+            padding: 20px;
+        }
+        .secret-btn, .send-btn, .reason-btn {
+            background-color: #ff6b81;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            border-radius: 20px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: 0.3s;
+        }
+        .secret-btn:hover, .send-btn:hover, .reason-btn:hover {
+            background-color: #ff4757;
+            transform: scale(1.05);
+        }
+        .secret-message {
+            display: none;
+            margin-top: 15px;
+            font-size: 1.1rem;
+            color: #555;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 15px;
+            border-radius: 10px;
+            max-width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .gift-container {
+            text-align: center;
+            padding: 30px;
+        }
+        .gift-box {
+            font-size: 60px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .gift-box:hover {
+            transform: scale(1.2);
+        }
+        #hidden-text {
+            display: none;
+            font-size: 1.5rem;
+            color: #ff4757;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        .music-player {
+            text-align: center;
+            margin: 30px auto;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.6);
+            border-radius: 15px;
+            max-width: 300px;
+        }
+        .music-btn {
+            background-color: #ff6b81;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 15px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: 0.3s;
+        }
+        .music-btn:hover {
+            background-color: #ff4757;
+        }
+        .reason-section {
+            text-align: center;
+            margin: 40px auto;
+            padding: 20px;
+            max-width: 400px;
+        }
+        .reason-box {
+            background: #fff;
+            padding: 20px;
+            border-radius: 15px;
+            font-size: 1.1rem;
+            color: #333;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            margin-bottom: 15px;
+            min-height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .note-section {
+            max-width: 500px;
+            margin: 30px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid #ddd;
+            margin-top: 10px;
+            resize: vertical;
+        }
+        .note-card {
+            background: #fff0f3;
+            padding: 10px 15px;
+            margin-top: 10px;
+            border-radius: 10px;
+            text-align: left;
+        }
+        .quiz-section {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.8);
+            max-width: 400px;
+            margin: 40px auto;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+        .quiz-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        .quiz-buttons button {
+            background-color: #ff6b81;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .quiz-buttons button:hover {
+            background-color: #ff4757;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Happy 1 Year & 4 Months, My Love! ❤️</h1>
+        <p class="subtitle">အချိန်တွေ ဘယ်လိုပဲပြောင်းလဲပါစေ၊ ကိုယ့်အချစ်တွေကတော့ ပိုလို့တောင် တိုးလာပါတယ်...</p>
+        
+        <div class="timer-container" id="timer">
+            <div class="time-box"><span id="days">0</span><span>ရက်</span></div>
+            <div class="time-box"><span id="hours">0</span><span>နာရီ</span></div>
+            <div class="time-box"><span id="minutes">0</span><span>မိနစ်</span></div>
+            <div class="time-box"><span id="seconds">0</span><span>စက္ကန့်</span></div>
+        </div>
+        <p style="font-size: 0.9rem; color: #666;">... အတူတူ လက်တွဲဖြတ်သန်းခဲ့ရတဲ့ အချိန်တွေ ✨</p>
+    </header>
+
+    <section class="gallery">
+        <div class="photo-card">
+            <img src="first.jpg" alt="Memory 1">
+            <p>ကိုကိုနဲ့ပထမဆုံးတူတူတွဲရိုက်ခဲ့တဲ့ဓာတ်ပုံလေး 🌹</p>
+        </div>
+        <div class="photo-card">
+            <img src="Thingyan.jpg" alt="Memory 2">
+            <p>ကိုကိုနဲ့သင်္ကြန်တူတူသွားလည်တုန်းကပုံလေး 😄</p>
+        </div>
+        <div class="photo-card">
+            <img src="Eros.jpg" alt="Memory 3">
+            <p>ကိုကိုနေပြည်တော်မသွားခင်နောက်ဆုံး Eros မှာတွေ့ခဲ့တဲ့ပုံလေး ✨</p>
+        </div>
+    </section>
+
+    <div class="secret-section">
+        <button class="secret-btn" onclick="revealSecret()">💌 ကိုကို့အတွက်ချစ်ပြောချစ်တဲ့စကားလေး</button>
+        <div id="mySecret" class="secret-message">
+            "အချိန်တွေဘယ်လောက်ပဲကြာသွားပါစေချစ်ရဲ့အချစ်တွေကမရိုးသွားပဲပိုလို့တောင်ချစ်ပါတယ်ကိုကို။" ❤️
+        </div>
+    </div>
+
+    <div class="gift-container">
+        <h3>ကိုယ့်ဆီက လက်ဆောင်လေး ဖွင့်ကြည့်လိုက်ဦး 👇</h3>
+        <div class="gift-box" onclick="openGift()">🎁</div>
+        <div id="hidden-text">
+            "ကိုကိုကချစ်ရဲ့အရေးပါတဲ့အစိတ်အပိုင်းလေးပါနော်🤭🤭"
+        </div>
+    </div>
+
+    <section class="letter-section">
+        <h2>💌 ရင်တွင်းစကား</h2>
+        <p>ချစ်ရဲ့အသဲတုန်းလေးရေ....</p>
+        <p>ဒီနေ့နဲ့ဆိုရင်ချစ်တို့နှစ်ယောက်တူတူရှိလာတာ ၁ နှစ်နဲ့ ၄ လတိတိပြည့်သွားပြီနော်ကိုကို။ အချိန်တွေကအရမ်းမြန်တာပဲ။ ဒါပေမဲ့ဝေးနေတဲ့အချိန်တွေဆိုအရမ်းလွမ်းနေရတာကိုကို။ သူများတွေသူတို့ကောင်လေးနဲ့သွားလည်တဲ့ချိန်ဆိုချစ်လဲကိုကိုနဲ့အရမ်းလည်ချင်တာပဲသိလား။ တူတူရှိခဲ့တဲ့အချိန်တွေကချစ်အတွက်တော့ပျော်စရာတွေကြည့်ပါပဲကိုကို။</p>
+        <p>တခါတလေစိတ်ကောက်တာတွေ၊ အမြင်မတူတာတွေရှိခဲ့ပေမဲ့အဲ့ပြဿနာတွေကချစ်တို့နှစ်ယောက်တစ်ယောက်ကိုတစ်ယောက်ပိုနားလည်ပြီးပိုချစ်လာကြတယ်။ အချိန်တွေကြာလာတဲ့အချိန်မှာလည်းချစ်နဲ့အတူတူနေပြီးသက်ဆုံတိုင်ချစ်သွားကြမယ်နော်ကိုကို။ အများကြီးချစ်တယ်အာဘွား😘😘</p>
+        <p>ကိုကိုရေပိုလိမ္မာအောင်နေရမယ်နော်။ ချစ်ကိုလည်းအများကြီးပိုချစ်ရမယ်။ ကိုယ့်စိတ်ကိုလည်းဒုက္ခပေးပြီးအရမ်းချုပ်တီးမထားရဘူးနော်။</p>
+        <p style="text-align: right; margin-top: 20px; font-weight: bold; color: #d81159;">- ကိုယ့်ရဲ့ ချစ်သူ -</p>
+    </section>
+
+    <div class="music-player">
+        <p>🎵 ကိုကိုသီချင်းလေးရောဖွင့်ပြီးနားထောင်နော်</p>
+        <audio id="bgMusic" loop>
+            <source src="music.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <button class="music-btn" onclick="toggleMusic()">▶️ Play Music</button>
+    </div>
+
+    <div class="reason-section">
+        <h3>✨ မင်းကို ကိုယ်ချစ်ရတဲ့ အကြောင်းရင်းများ...</h3>
+        <div class="reason-box" id="reasonDisplay">
+            "မင်းရဲ့ အပြုံးလေးတွေကို ကိုယ်အမြဲတမ်း ချစ်မိနေလို့..."
+        </div>
+        <button class="reason-btn" onclick="nextReason()">နောက်တစ်ခု ကြည့်မယ် 💫</button>
+    </div>
+
+    <div class="note-section">
+        <h3>💌 ကိုယ့်အတွက် မင်းရဲ့ ခံစားချက်လေး ရေးခဲ့ပေးပါဦး</h3>
+        <textarea id="partnerMessage" placeholder="ဒီမှာ စာရေးလို့ရပါတယ် ကိုယ့်ရဲ့ ရွှေရင်ကို..." rows="4"></textarea>
+        <br><br>
+        <button class="send-btn" onclick="saveNote()">စာပို့မည် 💖</button>
+        <div id="displayNotes"></div>
+    </div>
+
+    <div class="quiz-section">
+        <h3>🧠 နှစ်ယောက်သား သဘောတူညီမှု စမ်းသပ်ခန်း</h3>
+        <p id="quiz-question">မေးခွန်း ၁။ ကိုယ်တို့ ပထမဆုံး ဆုံခဲ့တဲ့နေရာက ဘယ်နားမှာလဲ?</p>
+        <div class="quiz-buttons">
+            <button onclick="checkAnswer(true)">ဂေါက်ကွင်းရှေ့မှာ 🏫</button>
+            <button onclick="checkAnswer(false)">မုန့်ဆိုင်မှာ</button>
+        </div>
+        <p id="quiz-result" style="margin-top: 15px; font-weight: bold;"></p>
+    </div>
+
+    <footer>
+        <p>Created with all my love ❤️ For You</p>
+    </footer>
+
+    <script>
+        const startDate = new Date("2025-05-09T00:00:00"); 
+
+        function updateTimer() {
+            const now = new Date();
+            const diff = now - startDate;
+
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerText = days;
+            document.getElementById("hours").innerText = hours;
+            document.getElementById("minutes").innerText = minutes;
+            document.getElementById("seconds").innerText = seconds;
+        }
+
+        setInterval(updateTimer, 1000);
+        updateTimer();
+
+        function revealSecret() {
+            var msg = document.getElementById("mySecret");
+            if (msg.style.display === "none" || msg.style.display === "") {
+                msg.style.display = "block";
+                createHearts();
+            } else {
+                msg.style.display = "none";
+            }
+        }
+
+        function createHearts() {
+            for (let i = 0; i < 25; i++) {
+                setTimeout(() => {
+                    const heart = document.createElement("div");
+                    heart.classList.add("heart-rain");
+                    heart.innerHTML = "❤️";
+                    heart.style.left = Math.random() * 100 + "vw";
+                    heart.style.animationDuration = (Math.random() * 3 + 2) + "s";
+                    heart.style.fontSize = (Math.random() * 20 + 10) + "px";
+                    document.body.appendChild(heart);
+
+                    setTimeout(() => {
+                        heart.remove();
+                    }, 5000);
+                }, i * 150);
+            }
+        }
+
+        function openGift() {
+            var gift = document.getElementById("hidden-text");
+            gift.style.display = "block";
+            createHearts(); 
+        }
+
+        function toggleMusic() {
+            var music = document.getElementById("bgMusic");
+            var btn = document.querySelector(".music-btn");
+            
+            if (music.paused) {
+                music.play();
+                btn.innerHTML = "⏸️ Pause Music";
+            } else {
+                music.pause();
+                btn.innerHTML = "▶️ Play Music";
+            }
+        }
+
+        function nextReason() {
+            document.getElementById("reasonDisplay").innerHTML = "အခုတော့ဒီလောက်ပဲလုပ်ပေးနိုင်သေးတယ်နောက်မှအများကြီးလုပ်ပေးမယ်နော်🥺";
+        }
+
+        window.onload = function() {
+            loadNotes();
+        };
+
+        function saveNote() {
+            const input = document.getElementById("partnerMessage");
+            const text = input.value.trim();
+            
+            if (text === "") {
+                alert("ကျေးဇူးပြု၍ စာလေး အရင်ရေးပေးပါဦးနော် 😊");
+                return;
+            }
+            
+            const now = new Date();
+            const timeString = now.toLocaleDateString() + " " + now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+            
+            const noteObj = {
+                text: text,
+                time: timeString
+            };
+            let notes = JSON.parse(localStorage.getItem("loveNotes")) || [];
+            notes.unshift(noteObj);
+            
+            localStorage.setItem("loveNotes", JSON.stringify(notes));
+            loadNotes();
+            
+            input.value = "";
+            createHearts();
+        }
+        function loadNotes() {
+            const container = document.getElementById("displayNotes");
+            if (!container) return;
+            container.innerHTML = "";
+            
+            let notes = JSON.parse(localStorage.getItem("loveNotes")) || [];
+            
+            notes.forEach(note => {
+                const card = document.createElement("div");
+                card.className = "note-card";
+                card.innerHTML = `"${note.text}" <span style="display:block; font-size:0.75rem; color:#888; margin-top:5px; text-align:right;">${note.time}</span>`;
+                container.appendChild(card);
+            });
+        }
+
+
+       
+
+        function checkAnswer(isCorrect) {
+            const result = document.getElementById("quiz-result");
+            if (isCorrect) {
+                result.style.color = "#2ed573";
+                result.innerHTML = "🎉 မှန်ပါတယ်! ကိုယ်တို့ရဲ့ အမှတ်တရတွေကို ကွက်တိမှတ်မိနေတာပဲ 💖";
+            } else {
+                result.style.color = "#ff4757";
+                result.innerHTML = "❌ ဟားဟား မှားသွားပြီ! ထပ်စဉ်းစားကြည့်ဦးနော် 🤭";
+            }
+        }
+    </script>
+</body>
+</html>
